@@ -2,11 +2,9 @@ package Ejercicio21;
 
 import org.junit.Test;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -54,10 +52,17 @@ public class MarcadorBaloncestoTest {
         fail("Debería haber saltado una excepción");
     }
     @Test
-    public void Test7() throws IOException {
+    public void Test7(){
         MarcadorBaloncesto mv = new MarcadorBaloncesto("Granada",12,"Estudiantes",8,LocalDate.now());
-        mv.guardar("test.txt");
-        assertEquals(true, new File("test.txt").exists());
-        //assertEquals("Granada:12-Estudiantes:8",new BufferedReader().readLine());
+        try {
+            mv.guardar("test.txt");
+            assertEquals(true, new File("test.txt").exists());
+            assertEquals("Granada:12-Estudiantes:8",new Scanner(new File("test.txt")).nextLine());
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

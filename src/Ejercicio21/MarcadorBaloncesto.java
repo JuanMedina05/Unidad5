@@ -58,5 +58,6 @@ public class MarcadorBaloncesto {
     public void guardar(String ruta) throws IOException{
         PrintWriter p = new PrintWriter(ruta);
         p.println(this.nombreLocal+":"+this.puntosLocal+"-"+this.nombreVisitante+":"+this.puntosVisitante);
+        p.close();
     }
 }
