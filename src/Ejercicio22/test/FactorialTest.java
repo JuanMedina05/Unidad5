@@ -26,4 +26,12 @@ public class FactorialTest {
     public void Test5(){
         assertEquals(-2102132736, new Factorial().factorial(20));
     }
+    @Test(expected=java.lang.StackOverflowError.class)
+    public void Test6(){
+        new Factorial().factorial(200000000);
+    }
+    @Test(expected=java.lang.IllegalArgumentException.class)
+    public void Test7(){
+        new Factorial().factorial(-2);
+    }
 }
