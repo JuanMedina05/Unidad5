@@ -22,8 +22,9 @@ public class AltavozTest {
     public void Test3(){
         Altavoz a = new Altavoz();
         a.setVolumen(127);
-        System.out.println(a.toString());
         assertEquals("[127]*****-----",a.toString());
+        a.ponerVolumenMaximo();
+        assertEquals("[255]**********",a.toString());
     }
 
 }
