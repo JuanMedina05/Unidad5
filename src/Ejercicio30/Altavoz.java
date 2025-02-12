@@ -8,10 +8,10 @@ public class Altavoz {
         this.volumen = 0;
     }
     public void ponerVolumenMaximo(){
-        this.volumen = VOL_MAX;
+        this.volumen = Altavoz.VOL_MAX;
     }
     public void setVolumen(int v){
-        if(v>=VOL_MIN&&v<=VOL_MAX){
+        if(v>=Altavoz.VOL_MIN&&v<=Altavoz.VOL_MAX){
             this.volumen = v;
         }else{
             throw new IllegalArgumentException("Volumen fuera de rango");

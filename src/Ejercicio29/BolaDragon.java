@@ -11,11 +11,14 @@ public class BolaDragon {
         return this.numero;
     }
     public static BolaDragon crearBolaDragon() throws Exception{
-        if(siguienteBola==MAXIMO_BOLAS){
+        if(BolaDragon.siguienteBola==BolaDragon.MAXIMO_BOLAS){
             throw new Exception("Ya se han creado 7 bolas de dragón");
         }else{
             siguienteBola ++;
-            return new BolaDragon(siguienteBola);
+            return new BolaDragon(BolaDragon.siguienteBola);
         }
+    }
+    public static void reset(){
+        BolaDragon.siguienteBola = 1;
     }
 }

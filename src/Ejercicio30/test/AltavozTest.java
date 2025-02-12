@@ -17,6 +17,7 @@ public class AltavozTest {
     public void Test2(){
         Altavoz a = new Altavoz();
         a.setVolumen(-28);
+        fail("No se ha lanzado la excepción");
     }
     @Test
     public void Test3(){

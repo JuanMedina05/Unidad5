@@ -14,7 +14,7 @@ public class Matricula {
         return this.nombreAlumno;
     }
     public String getNombreAsignatura(){
-        return this.getNombreAsignatura();
+        return this.nombreAsignatura;
     }
     public int getNumeroMatricula(){
         return this.numeroMatricula;
