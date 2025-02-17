@@ -14,5 +14,6 @@ public class BomboTest {
             b.sacarBola();
         }
         assertEquals(0,b.getNumeroBolas());
+        assertEquals(null,b.sacarBola());
     }
 }

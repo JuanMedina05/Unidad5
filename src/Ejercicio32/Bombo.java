@@ -17,8 +17,9 @@ public class Bombo {
         return this.bolas.size();
     }
     public Bola sacarBola(){
+        Bola b = this.bolas.peek();
         this.bolas.remove();
-        return this.bolas.peek();
+        return b;
     }
 
 }
